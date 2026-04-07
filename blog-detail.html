@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chi tiết bài viết</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container nav">
+
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="logo">
+      <span>GameSkin Store</span>
+    </a>
+        <ul class="menu">
+  <li><a href="index.html">Trang chủ</a></li>
+  <li><a href="about.html">Về chúng tôi</a></li>
+  <li><a href="shop.html">Sản phẩm</a></li>
+  <li><a href="blog.html">Blog</a></li>
+  <li><a href="contact.html">Liên hệ</a></li>
+    </ul>
+          <div class="cart-icon-container">
+        <a href="cart.html" class="cart-icon">
+          <i class="fa-solid fa-cart-arrow-down"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
+      </div> 
+            <a href="#" class="btn-login">Đăng nhập</a>
+    </div>
+</header>
+
+<!-- CONTENT -->
+<section class="product-detail">
+    <div class="container product-detail-grid">
+
+        <img id="blog-img" src="">
+
+        <div class="product-detail-info">
+            <h1 id="blog-title"></h1>
+
+            <p class="description" id="blog-content"></p>
+
+            <a href="shop.html" class="btn-buy">Mua acc ngay</a>
+            <a href="blog.html" class="btn-back">← Quay lại Blog</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- SCRIPT -->
+<script>
+const blogs = {
+    1: {
+        title: "Top Acc Liên Quân Rank Cao Giá Rẻ 🔥",
+        img: "https://cdn.tgdd.vn/Files/2023/10/29/1553450/1-301023-105735.jpg",
+        content: `
+        Đây là những tài khoản Liên Quân cực kỳ đáng mua hiện nay.
+
+        ✔ Rank Cao Thủ - Thách Đấu  
+        ✔ Full tướng meta  
+        ✔ Nhiều skin hiếm  
+
+        Nếu bạn muốn leo rank nhanh mà không cần cày từ đầu, đây là lựa chọn tối ưu nhất.
+        `
+    },
+
+    2: {
+        title: "Skin Free Fire Hiếm Nhất 2026",
+        img: "https://cellphones.com.vn/sforum/wp-content/uploads/2023/01/07.jpg",
+        content: `
+        Những skin hiếm nhất Free Fire thường chỉ xuất hiện trong event giới hạn.
+
+        💎 Giá trị cao  
+        🔥 Cực kỳ hiếm  
+        🎯 Phù hợp sưu tầm  
+
+        Nếu bạn là collector, đừng bỏ lỡ.
+        `
+    },
+
+    3: {
+        title: "Cách Leo Rank Nhanh Trong Liên Quân",
+        img: "https://cdn11.dienmaycholon.vn/filewebdmclnew/public/userupload/files/Image%20FP/top-trong-lien-quan-la-gi-2.jpg",
+        content: `
+        Muốn leo rank nhanh?
+
+        👉 Chơi tướng meta  
+        👉 Đi team thay vì solo  
+        👉 Tập trung mục tiêu (trụ, rồng, tà thần)
+
+        Đừng chỉ chăm chăm combat, thắng game mới là mục tiêu.
+        `
+    },
+
+    4: {
+        title: "Acc Valorant Full Skin Có Đáng Mua?",
+        img: "https://photo.znews.vn/w660/Uploaded/cplahuo/2026_02_27/tai_lien_quan_mobile_mien_phi_9.jpg",
+        content: `
+        Acc full skin Valorant giúp trải nghiệm game tốt hơn rất nhiều.
+
+        🎯 Hiệu ứng đẹp  
+        🎯 Tăng cảm hứng chơi  
+        🎯 Không cần nạp nhiều lần  
+
+        Nếu bạn chơi lâu dài, đây là khoản đầu tư hợp lý.
+        `
+    }
+};
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+const blog = blogs[id];
+
+document.getElementById("blog-title").innerText = blog.title;
+document.getElementById("blog-img").src = blog.img;
+document.getElementById("blog-content").innerText = blog.content;
+</script>
+
+</body>
+<footer id="contact" class="footer">
+
+  <div class="container footer-grid">
+
+    <div>
+      <h3>THÔNG TIN LIÊN HỆ</h3>
+      <p>Shop skin Liên Quân uy tín.</p>
+      <p>Email: gameskinstore@gmail.com</p>
+      <p>Hotline: 0123 456 789</p>
+    </div>
+
+    <div>
+      <h3>LIÊN KẾT</h3>
+      <p><a href="index.html">Trang chủ</a></p>
+      <p><a href="shop.html">Sản phẩm</a></p>
+      <p><a href="index.html#banner">Đại hội giảm giá</a></p>
+      <p><a href="contact.html">Liên hệ</a></p>
+    </div>
+
+ <div class="social-icons">
+
+  <a href="https://www.facebook.com/LienquanMobile" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+  </a>
+
+  <a href="https://www.instagram.com/lienquanmobile/" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+  </a>
+
+  <a href="https://www.tiktok.com/@lienquanmobile_garena" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+  </a>
+
+ </div>
+
+  </div>
+
+</footer>
+</html>

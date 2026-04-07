@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liên hệ - GameSkin Store</title>
+
+<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* ===== CONTACT PAGE ===== */
+.contact-section{
+    padding:80px 0;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap:40px;
+}
+
+/* LEFT */
+.contact-info h2{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:12px;
+    color:#cbd5e1;
+}
+
+.contact-item i{
+    color:#22d3ee;
+}
+
+/* MAP */
+.map iframe{
+    width:100%;
+    height:300px;
+    border-radius:12px;
+    border:none;
+    margin:20px 0;
+}
+
+/* FORM */
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.1);
+    background:#020617;
+    color:#fff;
+}
+
+.contact-form textarea{
+    height:150px;
+    resize:none;
+}
+
+/* RIGHT */
+.contact-team{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.team-member{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    background:rgba(15,23,42,0.8);
+    padding:15px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+
+.team-member:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 15px rgba(34,211,238,0.3);
+}
+
+.team-member img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.team-member h4{
+    margin-bottom:5px;
+}
+
+.team-member p{
+    font-size:13px;
+    color:#94a3b8;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container nav">
+
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="logo">
+      <span>GameSkin Store</span>
+    </a>
+
+   <ul class="menu">
+  <li><a href="index.html">Trang chủ</a></li>
+  <li><a href="about.html">Về chúng tôi</a></li>
+  <li><a href="shop.html">Sản phẩm</a></li>
+  <li><a href="blog.html">Blog</a></li>
+  <li><a href="contact.html">Liên hệ</a></li>
+</ul>
+      <div class="cart-icon-container">
+        <a href="cart.html" class="cart-icon">
+          <i class="fa-solid fa-cart-arrow-down"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
+      </div> 
+    <a href="#" class="btn-login">Đăng nhập</a>
+
+  </div>
+</header>
+
+
+<!-- CONTACT -->
+<section class="contact-section">
+<div class="container">
+
+<div class="contact-grid">
+
+<!-- LEFT -->
+<div>
+    <div class="contact-info">
+        <h2>Liên hệ với chúng tôi</h2>
+
+        <div class="contact-item">
+            <i class="fa fa-map-marker-alt"></i>
+            <span>TP.HCM Quận 7</span>
+        </div>
+
+        <div class="contact-item">
+            <i class="fa fa-envelope"></i>
+            <span>gameskinstore@gmail.com</span>
+        </div>
+
+        <div class="contact-item">
+            <i class="fa fa-phone"></i>
+            <span>0123 456 789</span>
+        </div>
+
+        <div class="contact-item">
+            <i class="fa fa-clock"></i>
+            <span>Thứ 2 - CN: 9:00 - 19:00</span>
+        </div>
+    </div>
+
+    <!-- MAP -->
+    <div class="map">
+        <iframe src="https://maps.google.com/maps?q=ho%20chi%20minh&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+
+    <!-- FORM -->
+    <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Họ và tên" required>
+        <input type="email" placeholder="E-Mail" required>
+        <input type="text" placeholder="Tiêu đề">
+        <textarea placeholder="Nội dung"></textarea>
+
+        <button class="btn-primary">Gửi đi</button>
+        <p id="successMessage" style="display:none; color:#22d3ee; margin-top:10px;">
+    Tin nhắn đã được gửi!
+</p>
+    </form>
+</div>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); 
+
+    document.getElementById("successMessage").style.display = "block";
+
+    this.reset();
+});
+</script>
+
+<!-- RIGHT -->
+<div class="contact-team">
+
+    <div class="team-member">
+        <img src="https://hotgirl.edu.vn/upload/2025/12/gai-xinh-da-trang-010.webp">
+        <div>
+            <h4>Nguyễn Lê Thanh Nhã</h4>
+            <p>SALES ASSISTANT</p>
+            <p>Điện thoại: 0237 592 248</p>
+            <p>Email: thanhnha@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="https://truyentranhmoi.edu.vn/upload/2025/11/hinh-anh-gai-xinh-viet-nam-001.webp">
+        <div>
+            <h4>Trần Vũ Nhật Hạ</h4>
+            <p>Head Manager</p>
+            <p>Điện thoại: 0927 942 482</p>
+            <p>Email: nhatha@gmail.com</p>
+        </div>
+    </div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<footer id="contact" class="footer">
+
+  <div class="container footer-grid">
+
+    <div>
+      <h3>THÔNG TIN LIÊN HỆ</h3>
+      <p>Shop skin Liên Quân uy tín.</p>
+      <p>Email: gameskinstore@gmail.com</p>
+      <p>Hotline: 0123 456 789</p>
+    </div>
+
+    <div>
+      <h3>LIÊN KẾT</h3>
+      <p><a href="index.html">Trang chủ</a></p>
+      <p><a href="shop.html">Sản phẩm</a></p>
+      <p><a href="index.html#banner">Đại hội giảm giá</a></p>
+      <p><a href="contact.html">Liên hệ</a></p>
+    </div>
+
+ <div class="social-icons">
+
+  <a href="https://www.facebook.com/LienquanMobile" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+  </a>
+
+  <a href="https://www.instagram.com/lienquanmobile/" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+  </a>
+
+  <a href="https://www.tiktok.com/@lienquanmobile_garena" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+  </a>
+
+ </div>
+
+  </div>
+
+</footer>
+
+<script src="cart.js"></script>
+
+</body>
+</html>
